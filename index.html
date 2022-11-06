@@ -12,18 +12,37 @@
     <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="start-screen">
         <h1>Tic-Tac-Toe</h1>
+        <h2>Enter your names</h2>
+        <form>
+            <label for="player-one">Player One (X):</label>
+            <input type="text" id="player-one">
+
+            <label for="player-two">Player Two (O):</label>
+            <input type="text" id="player-two">
+
+            <button class="start-button" type="button">Start</button>
+        </form>
+    </div>
+    <div class="game-screen">
+        <h1>Current Player: <span class="current-player"></span></h1>
         <div class="gameboard">
-            <div class="gameboard__field no-border-top no-border-left"></div>
-            <div class="gameboard__field no-border-top"></div>
-            <div class="gameboard__field no-border-top no-border-right"></div>
-            <div class="gameboard__field no-border-left"></div>
-            <div class="gameboard__field"></div>
-            <div class="gameboard__field no-border-right"></div>
-            <div class="gameboard__field no-border-bottom no-border-left"></div>
-            <div class="gameboard__field no-border-bottom"></div>
-            <div class="gameboard__field no-border-bottom no-border-right"></div>
+            <div data-index="0" class="gameboard__tile no-border-top no-border-left"></div>
+            <div data-index="1" class="gameboard__tile no-border-top"></div>
+            <div data-index="2" class="gameboard__tile no-border-top no-border-right"></div>
+            <div data-index="3" class="gameboard__tile no-border-left"></div>
+            <div data-index="4" class="gameboard__tile"></div>
+            <div data-index="5" class="gameboard__tile no-border-right"></div>
+            <div data-index="6" class="gameboard__tile no-border-bottom no-border-left"></div>
+            <div data-index="7" class="gameboard__tile no-border-bottom"></div>
+            <div data-index="8" class="gameboard__tile no-border-bottom no-border-right"></div>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="end-screen">
+            <h1 class="game-result-text"></h1>
+            <button type="button" class="restart-button">Restart</button> 
         </div>
     </div>
 </body>
